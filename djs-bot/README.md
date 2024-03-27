@@ -22,6 +22,8 @@
     - On the main page you can mess around and give your bot a description, tags and a Profile picture
   - Click on "Bot" in the panel on the left and "Add Bot" to create a new Discord Bot Client
     - Here you can enable some really neat API features for your bot, the one's you'll be needing are: "Server Member Intent" and "Message Content Intent" (Also disable "Public Bot" if you want)
+  - Now go to the "OAuth2" section and you should see the "Redirects" section. 
+    - We have to add 2 redirect links, the first one is `http://YOUR_IP:PORT(IF_ANY)/login` and the second one is `http://YOUR_IP:PORT(IF_ANY)/servers`
   - Now go to the "OAuth2" section and press on the "URL Generator" Tab
     - Select the "bot" and "applications.commands" scopes (A new table should open upon clicking on the "bot" scope)
     - In the "Bot Permissions" table you can select what permissions your bot will ask to have upon entering a new server, as you're setting it up it might be useful to give it "Administrator"
@@ -29,7 +31,7 @@
 (It should look something like `https://discord.com/oauth2/authorize?client_id={clientId}&permissions={permissions}&scope=bot%20applications.commands` Obviously replace the {variables} with the correct values if you intend to write it out yourself)
 
 ### Now that everything is set up on the discord side of things:
-  - You will need to fill in all the blanks in the `config.js` with the appropriate contents of your discord bot application or make a `.env` file and fill in the contents in this manner (lines marked with `*` are optional):
+  - You will need to fill in all the blanks in the `config.js` with the appropriate contents of your discord bot application or edit the `.env` file in this manner. You can find the `.env` file at project root directory. (lines marked with `*` are optional):
 ```bash
 TOKEN=botToken
 CLIENTID=botClientId
