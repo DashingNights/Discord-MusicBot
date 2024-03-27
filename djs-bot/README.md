@@ -29,7 +29,7 @@
 (It should look something like `https://discord.com/oauth2/authorize?client_id={clientId}&permissions={permissions}&scope=bot%20applications.commands` Obviously replace the {variables} with the correct values if you intend to write it out yourself)
 
 ### Now that everything is set up on the discord side of things:
-  - You will need to fill in all the blanks in the `config.js` with the appropriate contents of your discord bot application or edit the .env file in this manner. (lines marked with `*` are optional):
+  - You will need to fill in all the blanks in the `config.js` with the appropriate contents of your discord bot application or edit the `.env` file in this manner. You can find the `.env` file at project root directory. (lines marked with `*` are optional):
 ```bash
 TOKEN=botToken
 CLIENTID=botClientId
