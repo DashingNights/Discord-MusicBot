@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
+cp .env dashboard/.env
+cp .env djs-bot/.env
+echo ".env copy complete."
+
 BOT_ENV_PATH='djs-bot/.env'
 
 if [ -f $BOT_ENV_PATH ]; then
-  cp $BOT_ENV_PATH "docker/"
+    cp $BOT_ENV_PATH "docker/"
 else
     echo -e "\033[91mConfigure your bot .env properly!\033[0m"
     exit 130
